@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the Original and Really Great Assistant for Store Managers (O.R.G.A.S.M.)</h1>
+        <h2>Admin View</h2>
+    </div>
+    <div class="body">
+        <div class="login">
+            <h2>Create User:</h2>
+            {% with messages = get_flashed_messages(category_filter=['error']) %}
+            {% if messages %}
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <form action="/login" method="post" enctype="multipart/form-data">
+                <label for="storeNumber">Store Number:</label>
+                <input name="storeNumber" id="storeNumber" type="text">
+                <label for="password">Password:</label>
+                <input name="password" id="password" type="text">
+                <label for="mgrName">Manager Name:</label>
+                <input name="mgrName" id="mgrName" type="text">
+                <label for="region">Region:</label>
+                <select name="region" id="region">
+                    <option value="Paul Garman">Paul Garman</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
