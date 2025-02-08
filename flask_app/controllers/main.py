@@ -8,26 +8,52 @@ bcrypt = Bcrypt(app)
 
 @app.route('/')
 def home():
+    print(session)
     if 'id' in session:
         if session['id'] == 1:
+            print("admin view activated")
             return render_template('admin.html')
+        else:
+            user = users.User.getUserById({'id':session['id']})
+            return render_template('home.html', user = user)
     else:
-        return render_template('admin.html')
+        print(session)
+        return render_template('login.html')
 
-@app.route('/login', methods=['POST'])
-def login():
+@app.route('/createuser', methods=['POST'])
+def create():
     data = {
         'storeNumber': request.form['storeNumber'],
         'password': bcrypt.generate_password_hash(request.form['password']),
         'region': request.form['region'],
         'mgrName': request.form['mgrName']
     }
-
-    if users.User.validate_form(data):
-        id = users.User.create_user(data)
+    print(data)
+    if users.User.validateForm(data):
+        id = users.User.createUser(data)
+        print("creating user")
         session['id'] = id
     else:
         print('fail')
         return redirect('/')
+    return redirect('/')
 
+@app.route('/login', methods=['POST'])
+def login():
+    data = {
+        'storeNumber': request.form['storeNumber'],
+    }
+    checkUser = users.User.getUserByStoreNumber(data)
+    if not checkUser:
+        flash("Invalid credentials", "error")
+        return redirect('/')
+    if not bcrypt.check_password_hash(checkUser['password'], request.form['password']):
+        flash("Invalid Credentials", "error")
+        return redirect('/')
+    session['id'] = checkUser['id']
+    return redirect('/')
+
+@app.route('/logout')
+def logout():
+    session.clear()
     return redirect('/')

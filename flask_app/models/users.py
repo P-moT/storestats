@@ -10,7 +10,7 @@ class User:
         pass
 
     @staticmethod
-    def validate_form(data):
+    def validateForm(data):
         valid = True
         if len(data['storeNumber']) > 4:
             flash('Please enter a valid Store Number', 'error')
@@ -22,7 +22,27 @@ class User:
         return valid
 
     @classmethod
-    def create_user(cls, data):
+    def createUser(cls, data):
         query = "INSERT INTO users (storeNumber, password, region, mgrName) VALUES (%(storeNumber)s, %(password)s, %(region)s, %(mgrName)s);"
         print(query)
         return connectToMySQL(db).query_db(query, data)
+
+    @classmethod
+    def getUserById(cls, data):
+        query = "SELECT * FROM users WHERE id = %(id)s;"
+        print(query)
+        results = connectToMySQL(db).query_db(query, data)
+        if results:
+            return results[0]
+        else:
+            return None
+
+    @classmethod
+    def getUserByStoreNumber(cls, data):
+        query = "SELECT * FROM users WHERE storeNumber = %(storeNumber)s;"
+        print(query)
+        results = connectToMySQL(db).query_db(query, data)
+        if results:
+            return results[0]
+        else:
+            return None

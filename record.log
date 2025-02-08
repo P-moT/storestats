@@ -1,6 +1,23 @@
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 128-969-030
-INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 23:58:03] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 23:58:03] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 23:58:03] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [05/Feb/2025 23:58:03] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=KnZSo3SWqqPPOJsJnhi5 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:51:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:51:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:53:40] "GET /static/css/index.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:48] "GET /static/css/index.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:51] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Feb/2025 23:58:58] "GET / HTTP/1.1" 200 -
