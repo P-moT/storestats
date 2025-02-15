@@ -2,6 +2,7 @@ from flask_app.models import users
 from flask import render_template, request, redirect, session, flash
 from flask_app import app
 from flask_bcrypt import Bcrypt
+from flask_app.controllers.data import fiscalday
 import logging
 import os
 bcrypt = Bcrypt(app)
@@ -18,6 +19,12 @@ def home():
             return render_template('home.html', user = user)
     else:
         print(session)
+        data = {
+            'year': 2025,
+            'month': 1,
+            'day': 21
+        }
+        fiscalday(data)
         return render_template('login.html')
 
 @app.route('/createuser', methods=['POST'])
