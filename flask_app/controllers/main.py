@@ -19,12 +19,6 @@ def home():
             return render_template('home.html', user = user)
     else:
         print(session)
-        data = {
-            'year': 2025,
-            'month': 1,
-            'day': 21
-        }
-        fiscalday(data)
         return render_template('login.html')
 
 @app.route('/createuser', methods=['POST'])

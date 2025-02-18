@@ -3,10 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css">
     <title>Store Stats</title>
 </head>
 <body>
     <h1>Hello {{user.mgrName}}!</h1>
+    <h2>Input your monthly numbers:</h2>
+    <div class="body">
+
+        <form action="/input_month">
+            <div class="date">
+                <label for="month">Month:</label>
+                <select name="month" id="month">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <label for="year">Year:</label>
+                <input type="text" name="year" id="year">
+            </div>
+            <div class="data">
+                <div>
+                    <div>
+                        <label for="cars">Cars:</label>
+                    </div>
+                    <input type="text" name="cars" id="cars">
+                    <input type="text" name="cars1" id="cars1">
+                    <input type="text" name="cars2" id="cars2">
+                </div>
+                <div>
+                    <div>
+                        <label for="sales">Sales:</label>
+                    </div>
+                    <input type="text" name="sales" id="sales">
+                    <input type="text" name="sales1" id="sales1">
+                    <input type="text" name="sales2" id="sales2">
+                </div>
+                <div>
+                    <div>
+                        <label for="gp">GP$:</label>
+                    </div>
+                    <input type="text" name="gp" id="gp">
+                    <input type="text" name="gp1" id="gp1">
+                    <input type="text" name="gp2" id="gp2">
+                </div>
+                <div>
+                    <div>
+                        <label for="tires">Tires:</label>
+                    </div>
+                    <input type="text" name="tires" id="tires">
+                    <input type="text" name="tires1" id="tires1">
+                    <input type="text" name="tires2" id="tires2">
+                </div>
+                <div>
+                    <div>
+                        <label for="alignments">Alignments$:</label>
+                    </div>
+                    <input type="text" name="alignments" id="alignments">
+                    <input type="text" name="alignments1" id="alignments1">
+                    <input type="text" name="alignments2" id="alignments2">
+                </div>
+                <div>
+                    <div>
+                        <label for="balance">Balance$:</label>
+                    </div>
+                    <input type="text" name="balance" id="balance">
+                    <input type="text" name="balance1" id="balance1">
+                    <input type="text" name="balance2" id="balance2">
+                </div>
+                <div>
+                    <div>
+                        <label for="roadhazard">Roadhazard$:</label>
+                    </div>
+                    <input type="text" name="roadhazard" id="roadhazard">
+                    <input type="text" name="roadhazard1" id="roadhazard1">
+                    <input type="text" name="roadhazard2" id="roadhazard2">
+                </div>
+                <div>
+                    <div>
+                        <label for="tpms">TPMS$:</label>
+                    </div>
+                    <input type="text" name="tpms" id="tpms">
+                    <input type="text" name="tpms1" id="tpms1">
+                    <input type="text" name="tpms2" id="tpms2">
+                </div>
+                <div>
+                    <div>
+                        <label for="sensorunits">Sensor Units:</label>
+                    </div>
+                    <input type="text" name="sensorunits" id="sensorunits">
+                    <input type="text" name="sensorunits1" id="sensorunits1">
+                    <input type="text" name="sensorunits2" id="sensorunits2">
+                </div>
+                <div>
+                    <div>
+                        <label for="sensordollars">Sensor$:</label>
+                    </div>
+                    <input type="text" name="sensordollars" id="sensordollars">
+                    <input type="text" name="sensordollars1" id="sensordollars1">
+                    <input type="text" name="sensordollars2" id="sensordollars2">
+                </div>
+                <div>
+                    <div>
+                        <label for="brakedollars">Brake$:</label>
+                    </div>
+                    <input type="text" name="brakedollars" id="brakedollars">
+                    <input type="text" name="brakedollars1" id="brakedollars1">
+                    <input type="text" name="brakedollars2" id="brakedollars2">
+                </div>
+                <div>
+                    <div>
+                        <label for="acdollars">AC$:</label>
+                    </div>
+                    <input type="text" name="acdollars" id="acdollars">
+                    <input type="text" name="acdollars1" id="acdollars1">
+                    <input type="text" name="acdollars2" id="acdollars2">
+                </div>
+                <div>
+                    <div>
+                        <label for="shockunits">Shock Units:</label>
+                    </div>
+                    <input type="text" name="shockunits" id="shockunits">
+                    <input type="text" name="shockunits1" id="shockunits1">
+                    <input type="text" name="shockunits2" id="shockunits2">
+                </div>
+                <div>
+                    <div>
+                        <label for="shockdollars">Shock$:</label>
+                    </div>
+                    <input type="text" name="shockdollars" id="shockdollars">
+                    <input type="text" name="shockdollars1" id="shockdollars1">
+                    <input type="text" name="shockdollars2" id="shockdollars2">
+                </div>
+                <div>
+                    <div>
+                        <label for="brakeflushes">Brake Flushes:</label>
+                    </div>
+                    <input type="text" name="brakeflushes" id="brakeflushes">
+                    <input type="text" name="brakeflushes1" id="brakeflushes1">
+                    <input type="text" name="brakeflushes2" id="brakeflushes2">
+                </div>
+                <div>
+                    <div>
+                        <label for="oilunits">Oil Change Units:</label>
+                    </div>
+                    <input type="text" name="oilunits" id="oilunits">
+                    <input type="text" name="oilunits1" id="oilunits1">
+                    <input type="text" name="oilunits2" id="oilunits2">
+                </div>
+                <div>
+                    <div>
+                        <label for="oildollars">Oil$:</label>
+                    </div>
+                    <input type="text" name="oildollars" id="oildollars">
+                    <input type="text" name="oildollars1" id="oildollars1">
+                    <input type="text" name="oildollars2" id="oildollars2">
+                </div>
+                <div>
+                    <div>
+                        <label for="batteryunits">Battery Units:</label>
+                    </div>
+                    <input type="text" name="batteryunits" id="batteryunits">
+                    <input type="text" name="batteryunits1" id="batteryunits1">
+                    <input type="text" name="batteryunits2" id="batteryunits2">
+                </div>
+                <div>
+                    <div>
+                        <label for="batterydollars">Battery$:</label>
+                    </div>
+                    <input type="text" name="batterydollars" id="batterydollars">
+                    <input type="text" name="batterydollars1" id="batterydollars1">
+                    <input type="text" name="batterydollars2" id="batterydollars2">
+                </div>
+                <div>
+                    <div>
+                        <label for="wiperunits">Wiper Units:</label>
+                    </div>
+                    <input type="text" name="wiperunits" id="wiperunits">
+                    <input type="text" name="wiperunits1" id="wiperunits1">
+                    <input type="text" name="wiperunits2" id="wiperunits2">
+                </div>
+                <div>
+                    <div>
+                        <label for="wiperdollars">Wiper$:</label>
+                    </div>
+                    <input type="text" name="wiperdollars" id="wiperdollars">
+                    <input type="text" name="wiperdollars1" id="wiperdollars1">
+                    <input type="text" name="wiperdollars2" id="wiperdollars2">
+                </div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
     <button><a href="/logout">Logout</a></button>
 </body>
 </html>

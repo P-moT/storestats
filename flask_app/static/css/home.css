@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+}
+
+.data div {
+    display: flex;
+    width: 650px;
+    justify-content: space-between;
+}
+
+.body {
+    padding: 10px;
+}
